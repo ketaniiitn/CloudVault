@@ -1,105 +1,115 @@
-# Cloud-Vault
-Cloud-Vault is a cloud storage solution built on AWS S3, allowing users to:
+## Cloud-Vault
 
-- Create folders
-- Upload files
-- Delete folders
-- Authenticate with Google
-- Manage subscriptions with Razorpay
-The project is built as a monorepo using Yarn and is hosted on AWS through the Serverless Framework.
+Cloud-Vault is a robust, serverless cloud storage solution built on AWS S3, designed to provide secure and efficient file and folder management. It features seamless Google OAuth 2.0 authentication, integrated Razorpay subscriptions, and a scalable backend powered by AWS Lambda and PostgreSQL.
 
-# Features
+## 🚀 Features
 
-- Folder Management: Create and delete folders seamlessly.
-- File Uploads: Upload files directly to AWS S3.
-- Authentication: Google OAuth 2.0 for secure user authentication.
-- Subscription System: Razorpay integration for subscription payments.
-- Serverless Architecture: Efficiently hosted using AWS Lambda with the Serverless Framework.
-- Database Management: PostgreSQL with Prisma ORM for efficient data handling.
+Folder Management: Effortlessly create, rename, and delete folders to organize your files.
 
-# Tech Stack
-- Backend: AWS Lambda (Serverless Framework)
-- Cloud Storage: AWS S3
-- Payment Integration: Razorpay
-- Authentication: Google OAuth 2.0
-- Database: PostgreSQL with Prisma ORM
-- Package Management: Yarn (monorepo)
-- Hosting: AWS
+File Uploads: Securely upload files of any type directly to AWS S3.
 
-# Prerequisites
-Before running the project, make sure you have:
+Google Authentication: Secure user authentication powered by Google OAuth 2.0.
 
-- Node.js installed (v14 or higher recommended).
-- Yarn installed globally.
-- AWS CLI set up and configured with appropriate IAM permissions.
-- Razorpay account and API credentials.
-- A Google Cloud project with OAuth credentials.
-- PostgreSQL installed and running.
-- Serverless Framework installed globally.
+Subscription System: Integrated Razorpay for managing user subscriptions and payments.
 
-# Installation
-1. Clone the repository:
+Serverless Architecture: Highly scalable and cost-effective backend built with AWS Lambda and the Serverless Framework.
 
-```bash
+Data Management: Efficient data handling with PostgreSQL and Prisma ORM.
+
+Monorepo Structure: Streamlined development and dependency management using Yarn workspaces.
+
+## 🛠️ Tech Stack
+
+| Feature            | Technology                            |
+|--------------------|---------------------------------------|
+| **Backend**        | AWS Lambda (Serverless Framework)     |
+| **Cloud Storage**  | AWS S3                                |
+| **Payment Gateway**| Razorpay                              |
+| **Authentication** | Google OAuth 2.0                     |
+| **Database**       | PostgreSQL                            |
+| **ORM**            | Prisma                                |
+| **Package Manager**| Yarn (Monorepo)                       |
+| **Hosting**        | AWS                                   |
+
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed and configured:
+
+Node.js: v14 or higher recommended.
+
+Yarn: Installed globally (npm install -g yarn).
+
+AWS CLI: Configured with appropriate IAM permissions for S3, Lambda, etc.
+
+Razorpay Account: With API Key ID and Secret.
+
+Google Cloud Project: With OAuth 2.0 credentials (Client ID and Client Secret).
+
+PostgreSQL: An instance running locally or accessible remotely.
+
+Serverless Framework: Installed globally (npm install -g serverless).
+
+## ⚙️ Installation
+
+Follow these steps to get your Cloud-Vault project up and running:
+
+1️⃣ Clone the repository
 git clone https://github.com/bansalmohit123/cloud-vault.git
 cd cloud-vault
-```
-2. Install dependencies:
 
-```bash
+2️⃣ Install dependencies
 yarn install
-```
-3. Set up environment variables:
 
-Create a .env file in the root directory and add the following variables:
+3️⃣ Set up environment variables
+Create a .env file in the root directory and populate it with your credentials:
 
-.env
-```bash
 # AWS Configuration
 AWS_ACCESS_KEY_ID=your-aws-access-key-id
+
 AWS_SECRET_ACCESS_KEY=your-aws-secret-access-key
+
 AWS_REGION=your-aws-region
+
 S3_BUCKET_NAME=your-s3-bucket-name
 
 # Google OAuth Configuration
-AUTH_GOOGLE_ID =your-google-client-id
+AUTH_GOOGLE_ID=your-google-client-id
+
 AUTH_GOOGLE_SECRET=your-google-client-secret
-AUTH_SECRET=your-auth_secret
+
+AUTH_SECRET=your-auth-secret
 
 # Database Configuration
-DATABASE_URL=postgresql://username:password@host:port/database-name
+DATABASE_URL="postgresql://username:password@host:port/database-name"
 
 # Razorpay Configuration
 RAZORPAY_KEY_ID=your-razorpay-key-id
+
 RAZORPAY_KEY_SECRET=your-razorpay-key-secret
+
 NEXT_PUBLIC_RAZORPAY_KEY_ID=your-razorpay-key-id
 
 # Server Configuration
 SERVER_URL=your-server-url
 
-```
-# Running the Project
-1. Development
-Start the server locally:
+## 🚀 Running the Project
 
-```bash
+Development
+To run the project locally using the Serverless Offline plugin:
+
 yarn dev
-```
-This will start the project locally using the Serverless offline plugin.
 
-2. Access the project:
+Your server will typically be accessible at:
+http://localhost:3000
 
-Open your browser and go to http://localhost:3000.
+## 🌐 Deployment
 
+To deploy your Cloud-Vault project to AWS:
 
-# Deployment
-1. Deploy the project to AWS:
-
-```bash
 yarn deploy
-```
-This command deploys the project to your specified AWS environment.
 
-2. Verify deployment:
+Upon successful deployment, the Serverless Framework will provide the endpoint URLs for your deployed services.
 
-Access your cloud functions using the deployed endpoint URL provided by the Serverless Framework.
+## 🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the project.
